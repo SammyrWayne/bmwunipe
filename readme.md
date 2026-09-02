@@ -67,3 +67,6 @@ O projeto também pode ser aberto diretamente pelo navegador.
 ## Autor
 
 Sammyr
+
+02/09/2026 Avaliação em pares 
+O site atente bem aos requisitos de HTML semântico e formulário, utilizando corretamente estruturas como header, main, section footer, fieldset e legend. Só identifiquei um pequeno ajuste necessário no Label do campo de avaliação para deixar a acessibilidade totalmente correta, no geral o projeto está bom. 
