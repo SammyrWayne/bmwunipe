@@ -1,39 +1,556 @@
-<!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080e18"><title>BMW Universe | Catálogo de modelos</title>
-<style>
-:root{--bg:#080d16;--panel:#121d2d;--panel2:#17263a;--line:#2c3b50;--text:#f5f8fc;--muted:#a9b8ca;--blue:#168cff;--cyan:#6dd8ff}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.wrap{width:min(1200px,calc(100% - 36px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:#080d16ee;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav-inner{min-height:75px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:20px;font-weight:900;letter-spacing:.06em}.logo b,.accent{color:var(--cyan)}.links{display:flex;gap:26px;color:var(--muted)}.links a:hover{color:white}.pill,.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--blue);background:var(--blue);border-radius:999px;color:#fff;padding:12px 22px;font-weight:750;transition:.2s}.pill:hover,.btn:hover{background:#42a2ff;transform:translateY(-2px)}.btn.outline{background:transparent;border-color:#8091a77a}.hero{position:relative;min-height:590px;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 80% 50%,#16456d,#080d16 65%)}.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#080d16 0%,#080d16dd 39%,#080d1633 100%);pointer-events:none}.hero-photo{position:absolute;inset:0 0 0 32%;width:68%;height:100%;object-fit:cover;object-position:center;opacity:.84}.hero-inner{position:relative;z-index:1;padding:90px 0;max-width:1200px}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}h1{font-size:clamp(43px,6vw,82px);letter-spacing:-.065em;line-height:1.04;margin:16px 0 22px;max-width:720px}h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.12;margin:12px 0}p{color:var(--muted)}.hero p{font-size:18px;max-width:480px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-note{font-size:12px;color:#b8cce0;margin-top:24px}.section{padding:82px 0}.intro{max-width:760px;margin-bottom:32px}.metrics{display:flex;gap:36px;flex-wrap:wrap;margin-top:30px}.metrics strong{font-size:26px;display:block}.metrics span{font-size:12px;color:var(--muted)}.catalog{background:#0c1523}.toolbar{display:grid;grid-template-columns:1fr auto;gap:14px;margin:25px 0}.search{background:var(--panel);border:1px solid var(--line);border-radius:13px;color:white;padding:14px 17px;width:100%}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}.filter{border:1px solid var(--line);background:#101b2b;color:#b8c8db;border-radius:100px;padding:9px 16px}.filter.active,.filter:hover{background:var(--blue);border-color:var(--blue);color:#fff}.counter{color:var(--muted);font-size:13px;align-self:center}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel);transition:.2s;display:flex;flex-direction:column}.card:hover{transform:translateY(-5px);border-color:#168cff9a;box-shadow:0 18px 45px #0005}.photo-box{height:215px;background:linear-gradient(135deg,#1b334c,#0b1421);position:relative;overflow:hidden}.photo-box img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.card:hover img{transform:scale(1.05)}.photo-label{position:absolute;top:12px;left:12px;background:#07111cd9;padding:5px 10px;border-radius:30px;font-size:11px;font-weight:700;color:#dceaff}.photo-fallback{display:grid;place-items:center;position:absolute;inset:0;text-align:center;color:#b5c8d8;font-size:13px;padding:25px}.photo-fallback a{text-decoration:underline;color:var(--cyan)}.card-body{padding:22px;display:flex;flex:1;flex-direction:column}.card h3{font-size:24px;margin:4px 0 7px}.card p{margin:0 0 20px;font-size:14px;flex:1}.card-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:15px;gap:8px}.card-bottom span{font-size:12px;color:var(--muted)}.pick{border:0;background:none;color:var(--cyan);font-weight:800}.empty{padding:32px;text-align:center;color:var(--muted)}.about-grid,.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.panel{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:30px}.feature{padding:15px 0;border-bottom:1px solid var(--line)}.feature:last-child{border:0}.feature strong{display:block}.feature span{font-size:14px;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}.field label{font-size:13px;font-weight:700}.field input,.field select,.field textarea{border:1px solid var(--line);background:#0b1421;color:#fff;border-radius:10px;padding:12px;width:100%}.field textarea{min-height:105px;resize:vertical}.stars button{background:none;border:0;color:#52667d;font-size:32px;padding:0 5px}.stars button.on{color:#ffca57}.review{border-top:1px solid var(--line);padding:14px 0}.review strong{font-size:14px}.review p{font-size:13px;margin:4px 0}.avg{font-size:64px;font-weight:850;line-height:1.2}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}.footer .wrap{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap}.small{font-size:12px;color:var(--muted)}.status{font-size:13px;color:var(--cyan);min-height:22px}.top{position:fixed;right:20px;bottom:20px;border:1px solid var(--line);background:#20344e;color:white;width:44px;height:44px;border-radius:50%;display:none}.top.visible{display:block}@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-photo{left:20%;width:80%;opacity:.52}.hero:after{background:linear-gradient(90deg,#080d16ee,#080d1680)}.links{gap:12px}}@media(max-width:620px){.links{display:none}.nav-inner{min-height:65px}.hero{min-height:570px}.hero-photo{left:0;width:100%;opacity:.38}.hero:after{background:#080d1680}.hero-inner{padding:75px 0}.grid,.about-grid,.review-grid,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.toolbar{grid-template-columns:1fr}.section{padding:60px 0}.panel{padding:22px}.photo-box{height:230px}}
-</style></head><body>
-<header class="nav"><div class="wrap nav-inner"><a class="logo" href="#inicio">BMW <b>UNIVERSE</b></a><nav class="links" aria-label="Navegação"><a href="#sobre">História</a><a href="#modelos">Modelos</a><a href="#avaliacoes">Avaliações</a></nav><a class="pill" href="#modelos">Explorar BMW</a></div></header>
-<main><section class="hero" id="inicio"><img class="hero-photo" id="heroImage" alt="Fotografia real de uma BMW 320i F30" src="https://commons.wikimedia.org/wiki/Special:FilePath/BMW%20320i%20F30%20(10118122084)%20(cropped).jpg"><div class="wrap hero-inner"><span class="eyebrow">Um universo de máquinas</span><h1>O prazer de dirigir.<br><span class="accent">Em todas as versões.</span></h1><p>Explore a história, os estilos e a personalidade dos modelos BMW: dos sedãs clássicos aos esportivos M, SUVs e elétricos.</p><div class="hero-actions"><a class="btn" href="#modelos">Conhecer os modelos →</a><a class="btn outline" href="#sobre">Sobre a BMW</a></div><div class="metrics"><div><strong>26</strong><span>Modelos em destaque</span></div><div><strong>8</strong><span>Categorias</span></div><div><strong>100%</strong><span>Paixão por automóveis</span></div></div><div class="hero-note">Imagem de destaque: BMW 320i F30 · Fonte: Wikimedia Commons</div></div></section>
-<section class="section" id="sobre"><div class="wrap about-grid"><div><span class="eyebrow">Muito além da Série 3</span><h2>Uma marca, muitas experiências.</h2><p>A BMW é uma fabricante alemã reconhecida por sua tradição em engenharia automotiva. Seu portfólio abrange hatches, sedãs, coupés, conversíveis, SUVs, veículos elétricos e modelos de alta performance.</p><p>Este catálogo apresenta uma seleção de diferentes gerações e versões. A disponibilidade e as especificações variam conforme o país e o ano.</p><a href="#modelos" class="btn outline">Descobrir as categorias →</a></div><div class="panel"><div class="feature"><strong>Séries 1 a 8</strong><span>Do compacto urbano ao luxo de grandes sedãs e coupés.</span></div><div class="feature"><strong>BMW M</strong><span>Modelos com foco em desempenho e condução esportiva.</span></div><div class="feature"><strong>Família X</strong><span>SUVs de diferentes tamanhos e propostas.</span></div><div class="feature"><strong>Elétricos e roadsters</strong><span>Novas tecnologias e a liberdade de dirigir a céu aberto.</span></div></div></div></section>
-<section class="section catalog" id="modelos"><div class="wrap"><div class="intro"><span class="eyebrow">Galeria BMW</span><h2>Explore cada estilo de dirigir.</h2><p>26 versões com busca, filtros e fotografias reais consultadas no Wikimedia Commons. Clique em um modelo para avaliá-lo.</p></div><div class="toolbar"><input id="search" class="search" type="search" placeholder="Buscar: 320i, M3, X5, i4..." aria-label="Buscar modelos"><span class="counter" id="count">26 modelos</span></div><div class="filters" id="filters" aria-label="Filtrar categorias"></div><div class="grid" id="grid"></div><p class="small" style="margin-top:24px">Créditos das fotografias: cada imagem possui um link para sua página no Wikimedia Commons, com autor e licença. As imagens são carregadas pela internet; em caso de indisponibilidade, é exibido um link para localizar a fotografia.</p></div></section>
-<section class="section" id="avaliacoes"><div class="wrap"><div class="intro"><span class="eyebrow">Comunidade BMW</span><h2>Qual é sua BMW favorita?</h2><p>Selecione um modelo, atribua de 1 a 5 estrelas e compartilhe sua opinião. Avaliações salvas apenas neste navegador.</p></div><div class="review-grid"><div class="panel"><span class="eyebrow">Avaliações locais</span><div class="avg" id="average">—</div><div id="summaryStars" style="color:#ffca57;font-size:25px">☆☆☆☆☆</div><p id="reviewCount">Nenhuma avaliação registrada.</p><div id="reviewList"></div></div><form class="panel" id="reviewForm"><div class="form-grid"><div class="field"><label for="name">Seu nome *</label><input id="name" maxlength="60" required placeholder="Seu nome"></div><div class="field"><label for="model">BMW favorita *</label><select id="model" required><option value="">Selecione um modelo</option></select></div><div class="field full"><label>Sua nota *</label><div class="stars" id="starPicker" role="group" aria-label="Escolha de uma a cinco estrelas"><button type="button" data-star="1" aria-label="1 estrela">★</button><button type="button" data-star="2" aria-label="2 estrelas">★</button><button type="button" data-star="3" aria-label="3 estrelas">★</button><button type="button" data-star="4" aria-label="4 estrelas">★</button><button type="button" data-star="5" aria-label="5 estrelas">★</button></div></div><div class="field full"><label for="comment">Comentário</label><textarea id="comment" maxlength="500" placeholder="O que mais gosta nesse modelo?"></textarea></div></div><div style="margin-top:18px"><button class="btn" type="submit">Enviar avaliação →</button><p class="status" id="message" role="status"></p></div><p class="small">Projeto demonstrativo. Os dados ficam no armazenamento local do navegador, não são compartilhados com outros visitantes e podem ser apagados ao limpar os dados do site.</p></form></div></div></section></main>
-<footer class="footer"><div class="wrap"><span>BMW Universe · Projeto acadêmico de Front-end</span><span>HTML · CSS · JavaScript · Wikimedia Commons</span><span>Site independente, sem vínculo oficial com a BMW.</span></div></footer><button id="top" class="top" aria-label="Voltar ao topo">↑</button>
-<script>
-const MODELS=[{"name": "320i F30", "category": "Série 3", "query": "BMW 320i F30 sedan", "description": "Sedã esportivo que combina equilíbrio, conforto e prazer ao dirigir.", "years": "2012–2019"}, {"name": "118i F40", "category": "Série 1", "query": "BMW 118i F40", "description": "Hatch premium compacto com estilo urbano.", "years": "2019–2024"}, {"name": "M135i", "category": "Série 1", "query": "BMW M135i F40", "description": "Hatch esportivo com personalidade marcante.", "years": "2019–2024"}, {"name": "220i Coupé", "category": "Série 2", "query": "BMW 220i G42 coupe", "description": "Coupé compacto com proporções esportivas.", "years": "2021–atual"}, {"name": "M240i", "category": "Série 2", "query": "BMW M240i G42", "description": "Coupé de alto desempenho da linha M Performance.", "years": "2021–atual"}, {"name": "330i G20", "category": "Série 3", "query": "BMW 330i G20 sedan", "description": "Uma evolução moderna do sedã esportivo clássico.", "years": "2019–atual"}, {"name": "M340i", "category": "Série 3", "query": "BMW M340i G20", "description": "Seis cilindros e dinâmica de condução envolvente.", "years": "2019–atual"}, {"name": "420i Coupé", "category": "Série 4", "query": "BMW 420i G22 coupe", "description": "Design de duas portas com linhas elegantes.", "years": "2020–atual"}, {"name": "M440i", "category": "Série 4", "query": "BMW M440i G22 coupe", "description": "Estilo de coupé e desempenho M Performance.", "years": "2020–atual"}, {"name": "530i", "category": "Série 5", "query": "BMW 530i G30", "description": "Sedã executivo com tecnologia e conforto.", "years": "2017–2023"}, {"name": "540i", "category": "Série 5", "query": "BMW 540i G30", "description": "Sedã executivo com motor de seis cilindros.", "years": "2017–2023"}, {"name": "740i", "category": "Série 7", "query": "BMW 740i G70", "description": "Luxo, inovação e conforto na linha de representação.", "years": "2022–atual"}, {"name": "840i", "category": "Série 8", "query": "BMW 840i G15 coupe", "description": "Grand tourer de presença sofisticada.", "years": "2018–2025"}, {"name": "M2", "category": "BMW M", "query": "BMW M2 G87", "description": "Esportivo compacto da divisão BMW M.", "years": "2023–atual"}, {"name": "M3", "category": "BMW M", "query": "BMW M3 G80", "description": "Sedã de alto desempenho com legado nas pistas.", "years": "2021–atual"}, {"name": "M4", "category": "BMW M", "query": "BMW M4 G82 coupe", "description": "Coupé de alta performance da BMW M.", "years": "2021–atual"}, {"name": "M5", "category": "BMW M", "query": "BMW M5 F90", "description": "Sedã de desempenho extremo.", "years": "2017–2023"}, {"name": "X1", "category": "SUVs X", "query": "BMW X1 U11", "description": "SUV compacto versátil para a rotina.", "years": "2022–atual"}, {"name": "X3", "category": "SUVs X", "query": "BMW X3 G01", "description": "SUV médio que equilibra espaço e dinamismo.", "years": "2017–2024"}, {"name": "X5", "category": "SUVs X", "query": "BMW X5 G05", "description": "SUV de luxo com foco em conforto e desempenho.", "years": "2018–atual"}, {"name": "X6", "category": "SUVs X", "query": "BMW X6 G06", "description": "SUV-coupé de design marcante.", "years": "2019–atual"}, {"name": "X7", "category": "SUVs X", "query": "BMW X7 G07", "description": "SUV grande com espaço e sofisticação.", "years": "2019–atual"}, {"name": "i4", "category": "Elétricos", "query": "BMW i4 G26", "description": "Gran Coupé elétrico de proposta esportiva.", "years": "2021–atual"}, {"name": "i5", "category": "Elétricos", "query": "BMW i5 G60", "description": "Sedã executivo totalmente elétrico.", "years": "2023–atual"}, {"name": "iX", "category": "Elétricos", "query": "BMW iX I20", "description": "SUV elétrico de design futurista.", "years": "2021–atual"}, {"name": "Z4", "category": "Roadster", "query": "BMW Z4 G29 roadster", "description": "Roadster conversível feito para dirigir a céu aberto.", "years": "2018–atual"}];
-const grid=document.getElementById('grid'), filters=document.getElementById('filters'), search=document.getElementById('search'), select=document.getElementById('model');
-let activeCategory='Todos',stars=0;
-const categories=['Todos',...new Set(MODELS.map(m=>m.category))];
-const photoCache=new Map();
-// Consulta fotografias de arquivos reais no Wikimedia Commons, sem chave de API.
-async function getPhoto(m){
- if(photoCache.has(m.query))return photoCache.get(m.query);
- const terms=[m.query+' automobile',m.query,'BMW '+m.name];
- for(const term of terms){try{
-  const api=new URL('https://commons.wikimedia.org/w/api.php');api.searchParams.set('action','query');api.searchParams.set('generator','search');api.searchParams.set('gsrsearch','filetype:bitmap '+term);api.searchParams.set('gsrnamespace','6');api.searchParams.set('gsrlimit','8');api.searchParams.set('prop','imageinfo');api.searchParams.set('iiprop','url|mime|extmetadata');api.searchParams.set('iiurlwidth','760');api.searchParams.set('format','json');api.searchParams.set('origin','*');
-  const response=await fetch(api,{signal:AbortSignal.timeout(12000)});if(!response.ok)throw Error('API indisponível');const data=await response.json();const pages=Object.values(data.query?.pages||{});const words=m.query.toLowerCase().replace('bmw ','').split(' ').filter(x=>x.length>1);const candidates=pages.filter(p=>p.imageinfo?.[0]?.mime?.startsWith('image/') && !/logo|badge|emblem|interior|engine|dashboard|wheel|diagram|drawing|render/i.test(p.title));candidates.sort((a,b)=>words.filter(w=>a.title.toLowerCase().includes(w)).length-words.filter(w=>b.title.toLowerCase().includes(w)).length).reverse();const best=candidates.find(p=>words.slice(0,2).every(w=>p.title.toLowerCase().includes(w)))||candidates[0];if(best){const i=best.imageinfo[0];const photo={src:i.thumburl||i.url,page:i.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(best.title),title:best.title};photoCache.set(m.query,photo);return photo;}
- }catch(e){console.warn('Foto indisponível para',m.name,e.message)} }
- return null;
-}
-function renderFilters(){filters.replaceChildren();categories.forEach(c=>{const b=document.createElement('button');b.type='button';b.className='filter'+(activeCategory===c?' active':'');b.textContent=c;b.setAttribute('aria-pressed',String(activeCategory===c));b.onclick=()=>{activeCategory=c;renderFilters();renderCards()};filters.append(b)})}
-function makeCard(m){const article=document.createElement('article');article.className='card';const box=document.createElement('div');box.className='photo-box';const fallback=document.createElement('div');fallback.className='photo-fallback';fallback.textContent='Carregando fotografia real...';box.append(fallback);const tag=document.createElement('span');tag.className='photo-label';tag.textContent=m.category;box.append(tag);const body=document.createElement('div');body.className='card-body';const title=document.createElement('h3');title.textContent='BMW '+m.name;const desc=document.createElement('p');desc.textContent=m.description;const bottom=document.createElement('div');bottom.className='card-bottom';const years=document.createElement('span');years.textContent=m.years;const button=document.createElement('button');button.type='button';button.className='pick';button.textContent='Avaliar ↗';button.onclick=()=>{select.value=m.name;document.getElementById('avaliacoes').scrollIntoView({behavior:'smooth'});document.getElementById('message').textContent='Modelo selecionado: BMW '+m.name};bottom.append(years,button);body.append(title,desc,bottom);article.append(box,body);
- getPhoto(m).then(photo=>{if(!photo){fallback.replaceChildren();fallback.append('Não foi possível carregar a foto. ');const link=document.createElement('a');link.href='https://commons.wikimedia.org/w/index.php?search='+encodeURIComponent(m.query)+'&title=Special:MediaSearch&type=image';link.target='_blank';link.rel='noopener noreferrer';link.textContent='Buscar no Commons';fallback.append(link);return}const img=document.createElement('img');img.loading='lazy';img.alt='Fotografia real de BMW '+m.name;img.src=photo.src;img.onerror=()=>{img.remove();fallback.textContent='Imagem temporariamente indisponível'};img.onload=()=>fallback.remove();const link=document.createElement('a');link.href=photo.page;link.target='_blank';link.rel='noopener noreferrer';link.title='Ver autor, licença e arquivo original';link.setAttribute('aria-label','Créditos da foto da BMW '+m.name);link.style.cssText='position:absolute;right:10px;bottom:10px;background:#07111cdd;padding:4px 9px;border-radius:8px;font-size:11px;color:white';link.textContent='Foto ↗';box.prepend(img);box.append(link)});return article}
-function renderCards(){const q=search.value.toLocaleLowerCase('pt-BR').trim();const filtered=MODELS.filter(m=>(activeCategory==='Todos'||m.category===activeCategory)&&(m.name+' '+m.category+' '+m.description).toLocaleLowerCase('pt-BR').includes(q));document.getElementById('count').textContent=filtered.length+' de '+MODELS.length+' modelos';grid.replaceChildren(...filtered.map(makeCard));if(!filtered.length){const el=document.createElement('p');el.className='empty';el.textContent='Nenhum modelo encontrado. Tente outra busca.';grid.append(el)}}
-search.addEventListener('input',renderCards);MODELS.forEach(m=>{const option=document.createElement('option');option.value=m.name;option.textContent='BMW '+m.name;select.append(option)});renderFilters();renderCards();
-// Armazenamento local: demonstração de front-end, sem banco de dados.
-let reviews=[];try{const saved=JSON.parse(localStorage.getItem('bmw-universe-reviews')||'[]');if(Array.isArray(saved))reviews=saved.filter(r=>r&&typeof r.name==='string'&&Number.isInteger(r.rating)&&r.rating>=1&&r.rating<=5).slice(-100)}catch(e){}
-const starButtons=[...document.querySelectorAll('[data-star]')];function paintStars(){starButtons.forEach(b=>{b.classList.toggle('on',Number(b.dataset.star)<=stars);b.setAttribute('aria-pressed',String(Number(b.dataset.star)===stars))})}starButtons.forEach(b=>b.onclick=()=>{stars=Number(b.dataset.star);paintStars()});
-function renderReviews(){const n=reviews.length;const avg=n?reviews.reduce((s,r)=>s+r.rating,0)/n:0;document.getElementById('average').textContent=n?avg.toFixed(1).replace('.',','):'—';document.getElementById('summaryStars').textContent=n?'★'.repeat(Math.round(avg))+'☆'.repeat(5-Math.round(avg)):'☆☆☆☆☆';document.getElementById('reviewCount').textContent=n?n+' avaliação(ões) neste navegador':'Nenhuma avaliação registrada.';const list=document.getElementById('reviewList');list.replaceChildren();reviews.slice(-5).reverse().forEach(r=>{const item=document.createElement('div');item.className='review';const h=document.createElement('strong');h.textContent=r.name+' · BMW '+r.model+' · '+'★'.repeat(r.rating);const p=document.createElement('p');p.textContent=r.comment||'Sem comentário.';item.append(h,p);list.append(item)})}renderReviews();
-document.getElementById('reviewForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim(),model=select.value,comment=document.getElementById('comment').value.trim(),message=document.getElementById('message');if(!name||!model||!stars){message.textContent='Preencha o nome, escolha um modelo e selecione as estrelas.';return}reviews.push({name,model,comment,rating:stars});reviews=reviews.slice(-100);try{localStorage.setItem('bmw-universe-reviews',JSON.stringify(reviews));message.textContent='Avaliação salva neste navegador!'}catch(e){message.textContent='Avaliação adicionada, mas não foi possível salvar neste navegador.'}renderReviews();e.target.reset();stars=0;paintStars()});
-const topButton=document.getElementById('top');window.addEventListener('scroll',()=>topButton.classList.toggle('visible',scrollY>450),{passive:true});topButton.onclick=()=>scrollTo({top:0,behavior:'smooth'});
-</script></body></html>
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#080e18" name="theme-color"/>
+  <title>BMW Universe | Catálogo de modelos</title>
+
+  <link href="css/reset.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#inicio">BMW <b>UNIVERSE</b></a>
+
+      <button
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+      >☰</button>
+
+      <nav aria-label="Navegação" class="links" id="main-nav">
+        <a href="#sobre">História</a>
+        <a href="#modelos">Modelos</a>
+        <a href="#comparativo">Comparativo</a>
+        <a href="#midia">Mídia</a>
+        <a href="#favoritos">
+          Favoritos <span id="navFavCount">0</span>
+        </a>
+        <a href="#avaliacoes">Avaliações</a>
+
+        <div class="nav-dropdown">
+          <button
+            aria-controls="nav-submenu"
+            aria-expanded="false"
+            class="nav-drop-button"
+            type="button"
+          >Categorias ▾</button>
+
+          <div class="nav-submenu" id="nav-submenu">
+            <a href="#modelos">Séries BMW</a>
+            <a href="#comparativo">Comparativo</a>
+            <a href="#midia">Mídia</a>
+          </div>
+        </div>
+      </nav>
+
+      <a class="pill" href="#modelos">Explorar BMW</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SEÇÃO INICIAL -->
+    <section class="hero" id="inicio">
+      <img
+        alt="Fotografia real de uma BMW 320i F30"
+        class="hero-photo"
+        id="heroImage"
+        onerror="this.onerror=null;this.src='assets/images/hero-fallback.svg'"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/BMW%20320i%20F30%20(10118122084)%20(cropped).jpg"
+      />
+
+      <div class="wrap hero-inner">
+        <span class="eyebrow">Um universo de máquinas</span>
+
+        <h1>
+          BMW Universe — O prazer de dirigir.
+          <br/>
+          <span class="accent">Em todas as versões.</span>
+        </h1>
+
+        <p>
+          Explore a história, os estilos e a personalidade dos
+          modelos BMW: dos sedãs clássicos aos esportivos M,
+          SUVs e elétricos.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#modelos">
+            Conhecer os modelos →
+          </a>
+          <a class="btn outline" href="#sobre">
+            Sobre a BMW
+          </a>
+        </div>
+
+        <div class="metrics">
+          <div>
+            <strong>26</strong>
+            <span>Modelos em destaque</span>
+          </div>
+          <div>
+            <strong>8</strong>
+            <span>Categorias</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Paixão por automóveis</span>
+          </div>
+        </div>
+
+        <div class="hero-note">
+          Imagem de destaque: BMW 320i F30 · Fonte: Wikimedia Commons
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTÓRIA DA BMW -->
+    <section class="section" id="sobre">
+      <div class="wrap about-grid">
+        <div>
+          <span class="eyebrow">Muito além da Série 3</span>
+          <h2>Uma marca, muitas experiências.</h2>
+
+          <p>
+            A BMW é uma fabricante alemã reconhecida por sua
+            tradição em engenharia automotiva. Seu portfólio
+            abrange hatches, sedãs, coupés, conversíveis,
+            SUVs, veículos elétricos e modelos de alta performance.
+          </p>
+
+          <p>
+            Este catálogo apresenta uma seleção de diferentes
+            gerações e versões. A disponibilidade e as
+            especificações variam conforme o país e o ano.
+          </p>
+
+          <a class="btn outline" href="#modelos">
+            Descobrir as categorias →
+          </a>
+
+          <h3>O que você encontra aqui</h3>
+
+          <ul class="topic-list">
+            <li>Modelos clássicos, esportivos e elétricos da BMW.</li>
+            <li>Busca por nome e filtros por categoria.</li>
+            <li>Favoritos e avaliações salvos neste navegador.</li>
+          </ul>
+
+          <p>
+            <a
+              href="https://www.bmw.com.br/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Conheça o site oficial da BMW Brasil
+            </a>.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="feature">
+            <strong>Séries 1 a 8</strong>
+            <span>
+              Do compacto urbano ao luxo de grandes sedãs e coupés.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>BMW M</strong>
+            <span>
+              Modelos com foco em desempenho e condução esportiva.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>Família X</strong>
+            <span>
+              SUVs de diferentes tamanhos e propostas.
+            </span>
+          </div>
+
+          <div class="feature">
+            <strong>Elétricos e roadsters</strong>
+            <span>
+              Novas tecnologias e a liberdade de dirigir a céu aberto.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DE MODELOS -->
+    <section class="section catalog" id="modelos">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">Galeria BMW</span>
+          <h2>Explore cada estilo de dirigir.</h2>
+
+          <p>
+            26 versões com busca, filtros e fotografias reais
+            consultadas no Wikimedia Commons.
+            Clique em um modelo para avaliá-lo.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <input
+            aria-label="Buscar modelos"
+            class="search"
+            id="search"
+            placeholder="Buscar: 320i, M3, X5, i4..."
+            type="search"
+          />
+
+          <span aria-live="polite" class="counter" id="count">
+            26 modelos
+          </span>
+        </div>
+
+        <div
+          aria-label="Filtrar categorias"
+          class="filters"
+          id="filters"
+        ></div>
+
+        <div class="grid" id="grid"></div>
+
+        <p class="small" style="margin-top:24px">
+          Créditos das fotografias: cada imagem possui um link
+          para sua página no Wikimedia Commons, com autor e licença.
+          As imagens são carregadas pela internet; em caso de
+          indisponibilidade, é exibido um link para localizar
+          a fotografia.
+        </p>
+      </div>
+    </section>
+
+    <!-- TABELA COMPARATIVA -->
+    <section class="section" id="comparativo">
+      <div class="wrap">
+        <span class="eyebrow">Comparação</span>
+        <h2>BMW de diferentes propostas</h2>
+
+        <p>
+          Exemplos ilustrativos de gerações e carrocerias;
+          não representam especificações técnicas de todas
+          as versões.
+        </p>
+
+        <div class="table-scroll">
+          <table class="compare-table">
+            <caption>
+              Comparativo de modelos BMW do catálogo
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Modelo</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Carroceria / proposta</th>
+                <th scope="col">Período listado</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">320i F30</th>
+                <td>Série 3</td>
+                <td>Sedã esportivo</td>
+                <td>2012–2019</td>
+              </tr>
+
+              <tr>
+                <th scope="row">M3 G80</th>
+                <td>BMW M</td>
+                <td>Sedã de alto desempenho</td>
+                <td>2021–atual</td>
+              </tr>
+
+              <tr>
+                <th scope="row">X5 G05</th>
+                <td>SUVs X</td>
+                <td>SUV de luxo</td>
+                <td>2018–atual</td>
+              </tr>
+
+              <tr>
+                <th scope="row">i4 G26</th>
+                <td>Elétricos</td>
+                <td>Gran Coupé elétrico</td>
+                <td>2021–atual</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÍDIA E GRÁFICO -->
+    <section class="section catalog" id="midia">
+      <div class="wrap">
+        <span class="eyebrow">Mídia e dados</span>
+        <h2>Explore o universo BMW</h2>
+
+        <div class="media-grid">
+          <div>
+            <h3>Apresentação visual do catálogo</h3>
+
+            <video
+              aria-label="Animação de apresentação das categorias BMW"
+              controls
+              poster="assets/images/video-poster.svg"
+              preload="metadata"
+              width="640"
+            >
+              <source
+                src="assets/media/bmw-categorias.webm"
+                type="video/webm"
+              />
+              <source
+                src="assets/media/bmw-categorias.mp4"
+                type="video/mp4"
+              />
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+
+            <p class="small">
+              Animação gráfica original criada para o projeto;
+              não é filmagem oficial da BMW.
+            </p>
+          </div>
+
+          <div>
+            <h3>Modelos por categoria</h3>
+
+            <p>
+              O gráfico SVG é atualizado a partir dos
+              26 modelos do catálogo.
+            </p>
+
+            <svg
+              aria-labelledby="chartTitle chartDesc"
+              id="categoryChart"
+              role="img"
+              viewBox="0 0 600 350"
+            >
+              <title id="chartTitle">
+                Quantidade de modelos BMW por categoria
+              </title>
+              <desc id="chartDesc">
+                Gráfico de barras com a quantidade de
+                modelos por categoria.
+              </desc>
+            </svg>
+
+            <p class="small" id="chartText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAVORITOS -->
+    <section class="section" id="favoritos">
+      <div class="wrap">
+        <span class="eyebrow">Minha seleção</span>
+        <h2>Seus BMW favoritos</h2>
+
+        <p>
+          Use o botão Favoritar nos cards.
+          Os favoritos ficam salvos somente neste navegador.
+        </p>
+
+        <p aria-live="polite" id="favoritesSummary">
+          Nenhum modelo favoritado.
+        </p>
+
+        <div
+          aria-label="Modelos favoritos"
+          class="favorite-list"
+          id="favoriteList"
+        ></div>
+
+        <button
+          class="btn outline"
+          id="clearFavorites"
+          type="button"
+        >
+          Limpar favoritos
+        </button>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section class="section" id="avaliacoes">
+      <div class="wrap">
+        <div class="intro">
+          <span class="eyebrow">Comunidade BMW</span>
+          <h2>Qual é sua BMW favorita?</h2>
+
+          <p>
+            Selecione um modelo, atribua de 1 a 5 estrelas
+            e compartilhe sua opinião.
+            Avaliações salvas apenas neste navegador.
+          </p>
+        </div>
+
+        <div class="review-grid">
+          <div class="panel">
+            <span class="eyebrow">Avaliações locais</span>
+
+            <div class="avg" id="average">—</div>
+
+            <div
+              id="summaryStars"
+              style="color:#ffca57;font-size:25px"
+            >
+              ☆☆☆☆☆
+            </div>
+
+            <p aria-live="polite" id="reviewCount">
+              Nenhuma avaliação registrada.
+            </p>
+
+            <div id="reviewList"></div>
+          </div>
+
+          <form class="panel" id="reviewForm">
+            <fieldset class="review-fieldset">
+              <legend>Sua avaliação da BMW</legend>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Seu nome *</label>
+
+                  <input
+                    id="name"
+                    maxlength="60"
+                    minlength="2"
+                    pattern="[A-Za-zÀ-ÿ ]{2,60}"
+                    placeholder="Seu nome"
+                    required
+                    title="Use de 2 a 60 letras e espaços"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="model">BMW favorita *</label>
+
+                  <select id="model" required>
+                    <option value="">
+                      Selecione um modelo
+                    </option>
+                  </select>
+                </div>
+
+                <div class="field full">
+                  <label>Sua nota *</label>
+
+                  <div
+                    aria-label="Escolha de uma a cinco estrelas"
+                    class="stars"
+                    id="starPicker"
+                    role="group"
+                  >
+                    <button
+                      aria-label="1 estrela"
+                      data-star="1"
+                      type="button"
+                    >★</button>
+
+                    <button
+                      aria-label="2 estrelas"
+                      data-star="2"
+                      type="button"
+                    >★</button>
+
+                    <button
+                      aria-label="3 estrelas"
+                      data-star="3"
+                      type="button"
+                    >★</button>
+
+                    <button
+                      aria-label="4 estrelas"
+                      data-star="4"
+                      type="button"
+                    >★</button>
+
+                    <button
+                      aria-label="5 estrelas"
+                      data-star="5"
+                      type="button"
+                    >★</button>
+                  </div>
+                </div>
+
+                <div class="field full">
+                  <label for="comment">Comentário</label>
+
+                  <textarea
+                    id="comment"
+                    maxlength="500"
+                    minlength="0"
+                    placeholder="O que mais gosta nesse modelo?"
+                  ></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <div style="margin-top:18px">
+              <button class="btn" type="submit">
+                Enviar avaliação →
+              </button>
+
+              <p class="status" id="message" role="status"></p>
+            </div>
+
+            <p class="small">
+              Projeto demonstrativo. Os dados ficam no
+              armazenamento local do navegador, não são
+              compartilhados com outros visitantes e podem
+              ser apagados ao limpar os dados do site.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="wrap">
+      <span>
+        BMW Universe · Projeto acadêmico de Front-end
+      </span>
+
+      <span>
+        HTML · CSS · JavaScript · Wikimedia Commons
+      </span>
+
+      <span>
+        Site independente, sem vínculo oficial com a BMW.
+      </span>
+    </div>
+  </footer>
+
+  <button
+    aria-label="Voltar ao topo"
+    class="top"
+    id="top"
+  >↑</button>
+
+  <script defer src="js/script.js"></script>
+</body>
+</html>
