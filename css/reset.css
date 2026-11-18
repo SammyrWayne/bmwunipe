@@ -1,0 +1,2 @@
+/* Reset e box sizing global */
+*,*::before,*::after{box-sizing:border-box}html,body{margin:0;padding:0}img,video,svg{max-width:100%}button,input,textarea,select{font:inherit}button{cursor:pointer}
